@@ -1,10 +1,12 @@
 /* var text-decoration */
 @bg: #C4A2E2;
-@orange:#FF530A;
+@orange: #FF530A;
+
 @font-face {
     font-family: myfont;
     src: url(../fonts/ufonts.com_tw-cen-mt.ttf);
 }
+
 /*--
     Common Css
 --*/
@@ -17,17 +19,22 @@ body {
 
 
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0px;
     font-family: myfont;
 }
 
-h1{
+h1 {
     font-size: 36px;
 }
 
 h2 {
-    font-size: 24px;    
+    font-size: 24px;
     font-weight: 500;
 }
 
@@ -50,14 +57,17 @@ ul {
     list-style: none;
 }
 
-a, a:active, a:focus, a:active {
-    text-decoration:none !important;
+a,
+a:active,
+a:focus,
+a:active {
+    text-decoration: none !important;
     font-size: 15px;
 }
 
 /*============== Mixins style start ================*/
 
-.overlay-effect{
+.overlay-effect {
     content: "";
     position: absolute;
     left: 0;
@@ -74,18 +84,20 @@ a, a:active, a:focus, a:active {
 /*--
     custom heading Start
 --*/
-.heading{
+.heading {
     text-align: center;
     font-weight: 500;
     color: #2E2E2E;
     padding: 40px 0px;
     position: relative;
-    span{
+
+    span {
         font-size: 45px;
         color: @orange;
         font-weight: 600;
     }
-    &:before{
+
+    &:before {
         .before-border;
     }
 }
@@ -94,11 +106,12 @@ a, a:active, a:focus, a:active {
     custom heading Start
 --*/
 
-.title{
+.title {
     color: #2E2E2E;
     text-transform: uppercase;
     padding: 30px 0px;
-    span{
+
+    span {
         color: #FF5333;
     }
 }
@@ -121,7 +134,7 @@ a, a:active, a:focus, a:active {
     transition custom style
 --*/
 
-.transition{
+.transition {
     -webkit-transition: .3s all;
     -o-transition: .3s all;
     transition: .3s all;
@@ -133,9 +146,10 @@ a, a:active, a:focus, a:active {
 /*--
     header-img start Start
 --*/
-#hero-area{
+#hero-area {
     position: relative;
-    &:before{
+
+    &:before {
         .overlay-effect;
     }
 }
@@ -144,32 +158,38 @@ a, a:active, a:focus, a:active {
 /*--
     nav Start
 --*/
-nav{
+nav {
     z-index: 99999;
     width: 100%;
-    .block{
+
+    .block {
         margin-top: -85px;
         background: #fff;
         padding: 25px 40px;
         background: rgba(255, 255, 255, 0.89);
-        .navbar-default{
+
+        .navbar-default {
             border: none;
             border-radius: 0px;
             margin-bottom: 0;
             background: none;
-            .navbar-brand{
+
+            .navbar-brand {
                 padding-left: 0px;
             }
-            .navbar-nav{
+
+            .navbar-nav {
                 padding-top: 10px;
-                & > li{
-                    & > a{
+
+                &>li {
+                    &>a {
                         color: #2E2E2E;
                         padding: 10px 0px;
                         margin: 0px 15px;
                         font-size: 15px;
                         text-transform: uppercase;
-                        &:before{
+
+                        &:before {
                             background-color: transparent;
                             content: "";
                             position: absolute;
@@ -177,11 +197,12 @@ nav{
                             bottom: 0;
                             display: block;
                             height: 2px;
-                           .transition; 
+                            .transition;
                             width: 0;
                         }
-                        &:hover{
-                            &:before{
+
+                        &:hover {
+                            &:before {
                                 background-color: #e94c3d;
                                 content: "";
                                 width: 100%;
@@ -189,12 +210,14 @@ nav{
                         }
                     }
                 }
-                & > li.current{
-                    & > a{
+
+                &>li.current {
+                    &>a {
                         color: #2E2E2E;
                         padding: 10px 0px;
                         margin: 0px 15px;
-                        &:before{
+
+                        &:before {
                             background-color: transparent;
                             content: "";
                             position: absolute;
@@ -202,7 +225,7 @@ nav{
                             bottom: 0;
                             display: block;
                             height: 2px;
-                           .transition; 
+                            .transition;
                             width: 100%;
                             background-color: #e94c3d;
                         }
@@ -211,11 +234,13 @@ nav{
             }
 
         }
-        .navbar-default .navbar-nav>.active>a, 
-        .navbar-default .navbar-nav>.active>a:focus, 
-        .navbar-default .navbar-nav>.active>a:hover{
+
+        .navbar-default .navbar-nav>.active>a,
+        .navbar-default .navbar-nav>.active>a:focus,
+        .navbar-default .navbar-nav>.active>a:hover {
             background: none;
-            &:before{
+
+            &:before {
                 content: "";
                 position: absolute;
                 bottom: 0px;
@@ -230,27 +255,33 @@ nav{
 /*--
     slider Start
 --*/
-#slider{
-    padding:50px 0px;
-    .block{
+#slider {
+    padding: 50px 0px;
+
+    .block {
         padding: 0px 40px;
-        .title{
-            padding: 0px ;
+
+        .title {
+            padding: 0px;
         }
-        .owl-carousel{
+
+        .owl-carousel {
             padding-top: 30px;
             position: relative;
             text-align: center;
-            img{
+
+            img {
                 padding-right: 30px;
                 border-radius: 2px;
                 padding-bottom: 50px;
             }
-            .owl-pagination{
-                .active{
+
+            .owl-pagination {
+                .active {
                     background: #FF5333;
                 }
-                div{
+
+                div {
                     background: #DADADA;
                     border-radius: 100%;
                     display: inline-block;
@@ -259,7 +290,8 @@ nav{
                     width: 10px;
                 }
             }
-            .owl-buttons{
+
+            .owl-buttons {
                 position: absolute;
                 right: 0;
                 top: -40px;
@@ -274,12 +306,14 @@ nav{
     about-us Start
 --*/
 
-#about-us{
+#about-us {
     padding: 100px 0px;
     background: #F6F6F6;
-    .block{
+
+    .block {
         text-align: center;
-        p{
+
+        p {
             color: #959595;
             font-size: 16px;
             line-height: 26px;
@@ -287,10 +321,11 @@ nav{
         }
     }
 }
+
 /*--
     blog Start
 --*/
-#blog{
+#blog {
     padding-top: 75px;
     padding-bottom: 100px;
     background: url("../images/blog/blog-bg.jpg");
@@ -298,16 +333,20 @@ nav{
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-    &:before{
+
+    &:before {
         .overlay-effect;
     }
-    .block{
-       .heading {
-        color: #fff;
-       }
-        ul{
+
+    .block {
+        .heading {
+            color: #fff;
+        }
+
+        ul {
             padding-top: 40px;
-            li{
+
+            li {
                 overflow: hidden;
                 width: 50%;
                 float: left;
@@ -315,17 +354,20 @@ nav{
                 text-align: center;
                 color: #959595;
                 transform: 1s;
-                &:hover{
-                    img{
+
+                &:hover {
+                    img {
                         transform: scale(1.2) rotate(10deg);
                     }
                 }
-                h3{
+
+                h3 {
                     color: #323232;
                     padding: 0px 40px 20px;
                     line-height: 26px;
                     position: relative;
-                    &:before{
+
+                    &:before {
                         content: "";
                         position: absolute;
                         left: 50%;
@@ -336,33 +378,39 @@ nav{
                         margin-left: -45px;
                     }
                 }
-                p{
+
+                p {
                     padding-top: 25px;
                 }
-                .blog-img{
+
+                .blog-img {
                     float: left;
                     width: 50%;
                     height: 100%;
                     background: red;
                     overflow: hidden;
-                    img{
+
+                    img {
                         -webkit-transition: all .80s ease-out;
                         -o-transition: all .80s ease-out;
                         transition: all .80s ease-out;
                     }
-                } 
-                .blog-img-2{
+                }
+
+                .blog-img-2 {
                     width: 50%;
                     float: right;
                     overflow: hidden;
-                    img{
+
+                    img {
                         -webkit-transition: all .80s ease-out;
                         -o-transition: all .80s ease-out;
                         transition: all .80s ease-out;
                         width: 100%;
                     }
-                }  
-                .content-right{
+                }
+
+                .content-right {
                     padding: 40px 35px 23px;
                     font-size: 16px;
                     line-height: 26px;
@@ -370,7 +418,8 @@ nav{
                     width: 50%;
                     height: 100%;
                     position: relative;
-                    &:after{
+
+                    &:after {
                         content: "";
                         position: absolute;
                         left: 0;
@@ -386,13 +435,15 @@ nav{
                     }
 
                 }
-                .content-left{
+
+                .content-left {
                     padding: 40px 35px 23px;
                     width: 50%;
                     height: 100%;
                     float: left;
                     position: relative;
                     z-index: 999;
+
                     &:after {
                         content: "";
                         position: absolute;
@@ -403,25 +454,27 @@ nav{
                         margin-top: 0px;
                         background: #fff;
                         transform: rotate(45deg);
-                    }                         
+                    }
                 }
             }
         }
-        .btn-more-info{
+
+        .btn-more-info {
             float: right;
             padding: 28px 102.5px;
             border-radius: 0px;
             background: @orange;
             color: #fff;
-            border: 1px solid transparent ;
+            border: 1px solid transparent;
             text-transform: uppercase;
             font-weight: 500;
             font-size: 16px;
             .transition;
-            &:hover{
+
+            &:hover {
                 background: transparent;
                 color: @orange;
-                 border: 1px solid @orange;
+                border: 1px solid @orange;
             }
         }
     }
@@ -430,32 +483,39 @@ nav{
 /*--
     price Start
 --*/
-#price{
+#price {
     padding: 70px 0px;
-    .block{
-        >p{
+
+    .block {
+        >p {
             color: #9D9D9D;
             font-size: 16px;
             line-height: 26px;
             padding: 40px 133px 0;
             text-align: center;
         }
-        .pricing-list{
+
+        .pricing-list {
             padding-top: 85px;
-            ul{
+
+            ul {
                 padding: 0 0 30px;
                 margin: 0;
-                li{
+
+                li {
                     padding: 21px 0px;
-                    .item  {
+
+                    .item {
                         .item-title {
                             position: relative;
+
                             h2 {
                                 display: inline-block;
                                 position: relative;
                                 z-index: 99;
                                 background: #fff;
                             }
+
                             .border-bottom {
                                 position: absolute;
                                 top: 0;
@@ -465,20 +525,23 @@ nav{
                                 margin-top: 20px;
 
                             }
+
                             span {
                                 float: right;
                                 color: #938463;
                             }
                         }
+
                         p {
                             padding: 12px 0 0px;
                             color: #949494;
                         }
                     }
-                   
+
                 }
             }
-            .btn{
+
+            .btn {
                 padding: 28px 105px;
                 border-radius: 0px;
                 background: none;
@@ -487,11 +550,12 @@ nav{
                 font-size: 15px;
                 text-transform: uppercase;
                 font-weight: 600;
-               .transition;
-               &:hover {
+                .transition;
+
+                &:hover {
                     background: @orange;
                     color: #fff;
-               }
+                }
             }
         }
     }
@@ -501,7 +565,7 @@ nav{
     subscribe Start
 --*/
 
-#subscribe{
+#subscribe {
     padding: 100px 0px;
     text-align: center;
     background: url("../images/subscribe-bg.jpg");
@@ -509,20 +573,24 @@ nav{
     background-attachment: fixed;
     background-size: cover;
     position: relative;
-    &:before{
+
+    &:before {
         .overlay-effect;
     }
-    .block{
-        h1.heading{
+
+    .block {
+        h1.heading {
             color: #fff;
         }
-        p{
+
+        p {
             padding: 25px 0px;
             color: #fff;
             font-size: 18px;
         }
-        form{
-            .form-control{
+
+        form {
+            .form-control {
                 width: 450px;
                 background: #fff;
                 opacity: 0.9;
@@ -531,11 +599,19 @@ nav{
                 border-radius: 0px;
                 font-size: 15px;
             }
-            .input-group-addon{
+
+
+            .center-text-form {
+                justify-content: center !important;
+            }
+
+
+            .input-group-addon {
                 padding: 0px;
                 border: none;
                 background: none;
-                button{
+
+                button {
                     width: 212px;
                     height: 65px;
                     border: none;
@@ -547,7 +623,8 @@ nav{
                     letter-spacing: 2px;
                     text-transform: uppercase;
                     .transition;
-                    &:hover{
+
+                    &:hover {
                         background: #69a8a1;
                     }
                 }
@@ -559,34 +636,41 @@ nav{
 /*--
     contact-us Start
 --*/
-#contact-us{
+#contact-us {
     padding: 70px 0px;
-    .block{
+
+    .block {
         .title {
-            padding:20px 0;
+            padding: 20px 0;
         }
-        form{
+
+        form {
             padding-bottom: 20px;
-            input{
+
+            input {
                 height: 48px;
                 border-radius: 0px;
                 box-shadow: none;
                 .transition;
-                &:focus{
+
+                &:focus {
                     border: 1px solid #7EC3BB;
                 }
             }
-            textarea{
+
+            textarea {
                 height: 140px;
                 border-radius: 0px;
                 box-shadow: none;
                 .transition;
-                &:focus{
+
+                &:focus {
                     border: 1px solid #7EC3BB;
                 }
             }
         }
-        a{
+
+        a {
             background: #FF4F02;
             float: right;
             color: #fff;
@@ -597,7 +681,7 @@ nav{
             width: 512px;
             height: 50px;
             padding-top: 15px;
-           .transition;
+            .transition;
         }
     }
 }
@@ -605,62 +689,74 @@ nav{
 /*--
     footer Start
 --*/
-#footer{
-    padding: 70px 0px;    
-    .block{
-        h3{
+#footer {
+    padding: 70px 0px;
+
+    .block {
+        h3 {
             color: #2E2E2E;
             padding-bottom: 25px;
-            span{
+
+            span {
                 color: #FF4F02;
             }
         }
 
-        .blog, .info,.gallary{
-            ul{
+        .blog,
+        .info,
+        .gallary {
+            ul {
                 padding-top: 20px;
-                li{
+
+                li {
                     margin-bottom: 25px;
                     display: inline-block;
                     margin-right: 20px;
-                    h4{
+
+                    h4 {
                         padding-bottom: 10px;
                         display: block;
                         color: #FF4F02;
+
                         i {
                             color: #555;
                             margin-right: 30px;
                             font-size: 20px;
                         }
 
-                        a{
+                        a {
                             color: #FF4F02;
                             font-size: 20px;
-                            
+
                             font-weight: 600;
                         }
                     }
-                    p{
+
+                    p {
                         color: #474747;
                         font-size: 14px;
                     }
                 }
             }
         }
-        .social-media-link{
-            h3{
+
+        .social-media-link {
+            h3 {
                 font-size: 20px;
                 padding-bottom: 15px;
                 padding-top: 30px;
-                span{
+
+                span {
                     color: #FF4F02;
                 }
             }
-            ul{
-                li{
+
+            ul {
+                li {
                     display: inline-block;
                     margin-right: 20px;
-                    a{
+
+                    a {
                         display: block;
                         width: 40px;
                         height: 40px;
@@ -670,10 +766,11 @@ nav{
                         border-radius: 100%;
                         background: #B0B0B0;
                         color: #FFFFFF;
-                       .transition;
-                        &:hover{
-                          background: #FF4F02;
-                          color: #fff;
+                        .transition;
+
+                        &:hover {
+                            background: #FF4F02;
+                            color: #fff;
                         }
                     }
                 }
@@ -685,18 +782,20 @@ nav{
 /*--
     footer-bottom Start
 --*/
-#footer-bottom{
+#footer-bottom {
     background: #E9E9E9;
     padding: 20px 0px;
-    p{
+
+    p {
         text-align: center;
         padding-top: 12px;
         color: #454545;
         font-size: 12px;
         font-weight: 600;
         letter-spacing: 2px;
-        a{
+
+        a {
             color: #FF4F02;
         }
-     }
- }
+    }
+}
