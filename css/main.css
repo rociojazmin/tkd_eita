@@ -482,6 +482,10 @@ nav .block .navbar-default .navbar-nav>.active>a:hover:before {
   border: 1px solid #ff530a;
 }
 
+.container_video {
+  padding: 5em;
+}
+
 /*--
     price Start
 --*/
